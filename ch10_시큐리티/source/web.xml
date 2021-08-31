@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<web-app>
+	<security-role>
+		<role-name>manager</role-name>
+	</security-role>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JSPBook</web-resource-name>
+			<url-pattern>/ex10/sucess.jsp</url-pattern>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description></description>
+			<role-name>manager</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/ex10/login.jsp</form-login-page>
+			<form-error-page>/ex10/login_failed.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+</web-app>
+	
